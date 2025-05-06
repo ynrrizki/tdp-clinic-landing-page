@@ -33,7 +33,7 @@ const contactItems = [
 
 export default function SectionContact() {
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-6">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-3xl font-bold text-center text-navy mb-12">
           Hubungi Kami

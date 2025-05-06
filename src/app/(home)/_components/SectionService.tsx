@@ -62,7 +62,7 @@ export default function SectionServices() {
     <section
       id="layanan"
       ref={sectionRef}
-      className="relative py-20 px-4 min-h-screen"
+      className="relative py-20 px-6"
     >
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl font-bold text-center text-navy mb-12">

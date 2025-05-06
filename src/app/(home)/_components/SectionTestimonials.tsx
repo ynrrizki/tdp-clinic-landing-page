@@ -61,7 +61,7 @@ export default function SectionTestimonials() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-20 px-4">
+    <section ref={sectionRef} className="relative py-20 px-6">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl font-bold text-center text-navy mb-12">
           Apa Kata Mereka?

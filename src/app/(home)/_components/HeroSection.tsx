@@ -21,15 +21,15 @@ export default function HeroSection() {
     }
   };
   return (
-    <section className="relative overflow-hidden pt-32 pb-16 min-h-screen">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-4">
+    <section className="relative overflow-hidden md:pt-32 pb-16 min-h-[calc(100vh-90px)]">
+      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-8 px-6">
         <motion.div
           className="flex-1 max-w-xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-3xl md:text-5xl font-bold text-navy mb-6">
+          <h1 className="text-2xl md:text-5xl font-bold text-navy mb-6">
             Layanan Medis Tanpa Antre, Tanpa Repot. Kami Datang Untuk Anda!
           </h1>
           <p className="text-base md:text-lg text-gray-700 mb-8">
@@ -52,7 +52,8 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="flex-1 max-w-md"
+          //   className="flex-1 max-w-md"
+          className="flex-1 w-screen md:max-w-md"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
