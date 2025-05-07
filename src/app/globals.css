@@ -96,6 +96,8 @@
 
   --muted: oklch(0.95 0 0); /* Abu muda */
   --muted-foreground: oklch(0.5 0 0); /* Abu gelap */
+
+  --accent: oklch(0.92 0.16 85);
 }
 
 /* .dark {

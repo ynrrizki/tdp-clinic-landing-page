@@ -47,7 +47,7 @@ export default function SectionContact() {
             >
               <item.icon className="text-navy w-5 h-5 mt-1" />
               <div>
-                <p className="text-sm text-gray-500 font-medium mb-1">
+                <p className="text-sm text-muted-foreground font-medium mb-1">
                   {item.label}
                 </p>
                 {item.href ? (
@@ -55,12 +55,12 @@ export default function SectionContact() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-800 hover:underline"
+                    className="text-primary hover:underline"
                   >
                     {item.value}
                   </a>
                 ) : (
-                  <p className="text-gray-800">{item.value}</p>
+                  <p className="text-primary">{item.value}</p>
                 )}
               </div>
             </div>

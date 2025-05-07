@@ -51,18 +51,18 @@ export default function SectionWhyChoose() {
   return (
     <section id="mengapa-kami" ref={sectionRef} className="relative py-20 px-6">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl font-bold text-center text-navy mb-12">
+        <h2 className="text-3xl font-bold text-center text-primary mb-12">
           Mengapa Memilih Kami?
         </h2>
 
-        <div className="flex flex-col gap-8">
+        <div className="grid grid-cols-2 gap-8">
           {reasons.map((reason, i) => (
             <div
               key={i}
               className="reason-item flex items-start gap-4 p-4 bg-gray-50 rounded-md shadow-sm"
             >
               <div className="text-3xl">{reason.emoji}</div>
-              <div className="text-lg text-gray-800 font-medium">
+              <div className="text-lg text-primary font-medium">
                 {reason.text}
               </div>
             </div>

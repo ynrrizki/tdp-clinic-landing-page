@@ -65,7 +65,7 @@ export default function SectionServices() {
       className="relative py-20 px-6"
     >
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl font-bold text-center text-navy mb-12">
+        <h2 className="text-3xl font-bold text-center text-primary mb-12">
           Layanan Unggulan Kami
         </h2>
 
@@ -77,10 +77,10 @@ export default function SectionServices() {
             >
               <service.icon className={`w-6 h-6 mt-1 ${service.color}`} />
               <div>
-                <h3 className="text-xl font-semibold text-navy mb-1">
+                <h3 className="text-xl font-semibold text-primary mb-1">
                   {service.title}
                 </h3>
-                <p className="text-gray-700 text-sm">{service.description}</p>
+                <p className="text-muted-foreground text-sm">{service.description}</p>
               </div>
             </div>
           ))}
