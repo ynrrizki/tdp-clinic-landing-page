@@ -15,9 +15,9 @@ import {
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { articleCategories } from "@/app/data/articleDataDummy";
 
 export default function Navbar() {
-  const articleCategories = ["Kesehatan", "Gaya Hidup", "Anak", "Lansia"];
   const galleryItems = [
     "/assets/placeholder.png",
     "/assets/placeholder.png",
@@ -53,9 +53,9 @@ export default function Navbar() {
     {
       title: "Artikel",
       href: "/article",
-      subItems: articleCategories.map((cat) => ({
-        title: cat,
-        href: `/article?category=${cat.toLowerCase()}`,
+      subItems: articleCategories.slice(0, 4).map((cat) => ({
+        title: cat.name,
+        href: `/article?category=${cat.id}`,
       })),
     },
     {
@@ -90,13 +90,13 @@ export default function Navbar() {
               <NavigationMenuTrigger>Artikel</NavigationMenuTrigger>
               <NavigationMenuContent className="min-w-[200px]">
                 <ul className="grid gap-2 p-4">
-                  {articleCategories.map((cat) => (
-                    <li key={cat}>
+                  {articleCategories.slice(0, 4).map((cat) => (
+                    <li key={cat.id}>
                       <NavigationMenuLink
-                        href={`/article?category=${cat.toLowerCase()}`}
+                        href={`/article?category=${cat.id}`}
                         className="block px-2 py-1 hover:underline"
                       >
-                        {cat}
+                        {cat.name}
                       </NavigationMenuLink>
                     </li>
                   ))}
