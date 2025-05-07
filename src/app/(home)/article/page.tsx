@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { articleCategories, articleList } from "@/app/data/articleDataDummy";
 import Link from "next/link";
@@ -7,7 +8,7 @@ import ImageWithFallback from "@/components/ui/ImageWithFallback";
 import { Newspaper } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
-export default function ArticlePage() {
+function ArticleContent() {
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get("category");
   const router = useRouter();
@@ -148,5 +149,13 @@ export default function ArticlePage() {
         </>
       )}
     </section>
+  );
+}
+
+export default function ArticlePage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ArticleContent />
+    </Suspense>
   );
 }
