@@ -55,7 +55,7 @@ export default function SectionWhyChoose() {
           Mengapa Memilih Kami?
         </h2>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {reasons.map((reason, i) => (
             <div
               key={i}
