@@ -113,7 +113,7 @@ export default function Navbar() {
 
             <NavigationMenuItem>
               <NavigationMenuTrigger>Galeri</NavigationMenuTrigger>
-              <NavigationMenuContent className="min-w-[200px]">
+              <NavigationMenuContent className="min-w-[300px]">
                 <div className="grid grid-cols-2 gap-2 p-4">
                   {galleryItems.map((src, i) => (
                     <div

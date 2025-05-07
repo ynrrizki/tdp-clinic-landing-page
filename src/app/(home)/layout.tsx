@@ -8,7 +8,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar />
-      <div className="fixed inset-0 -z-10 w-full h-full [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,rgba(0,123,255,0.2)_100%)]" />
+      {/* <div className="fixed inset-0 -z-10 w-full h-full [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,rgba(0,123,255,0.2)_100%)]" /> */}
+      <div className="fixed inset-0 -z-10 w-full h-full [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,oklch(0.92_0.16_85_/_0.3)_100%)]" />
       <ScrollWrapper>
         <main className="relative mt-16 min-h-screen">{children}</main>
         <Footer /> {/* ✅ tambahkan di sini */}

@@ -22,7 +22,7 @@ export default function HeroSection() {
   };
   return (
     <section className="relative overflow-hidden md:pt-32 pb-16 min-h-[calc(100vh-90px)]">
-      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-8 px-6">
+      <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-8 px-6">
         <motion.div
           className="flex-1 max-w-xl"
           initial={{ opacity: 0, y: 40 }}
@@ -53,7 +53,7 @@ export default function HeroSection() {
 
         <motion.div
           //   className="flex-1 max-w-md"
-          className="flex-1 w-screen md:max-w-md"
+          className="flex-1 w-screen md:max-w-3xl"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}

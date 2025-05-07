@@ -49,11 +49,7 @@ export default function SectionWhyChoose() {
   }, []);
 
   return (
-    <section
-      id="mengapa-kami"
-      ref={sectionRef}
-      className="relative py-20 px-6"
-    >
+    <section id="mengapa-kami" ref={sectionRef} className="relative py-20 px-6">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl font-bold text-center text-navy mb-12">
           Mengapa Memilih Kami?
