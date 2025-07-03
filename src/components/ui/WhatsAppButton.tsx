@@ -22,10 +22,19 @@ export default function WhatsAppButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex"
+      className="inline-flex relative group"
     >
-      <Button variant="default" className="gap-2">
-        <MessageCircle className="w-4 h-4" />
+      {/* Small notification dot with pulse */}
+      <div className="absolute -top-1 -right-1 z-20">
+        <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+        <div className="absolute inset-0 w-3 h-3 bg-red-400 rounded-full animate-ping opacity-75"></div>
+      </div>
+      
+      <Button 
+        variant="default" 
+        className="gap-2 bg-green-500 hover:bg-green-600 text-white relative z-10 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+      >
+        <MessageCircle className="w-4 h-4 group-hover:animate-bounce" />
         {label}
       </Button>
     </a>

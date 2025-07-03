@@ -51,6 +51,17 @@ export default function Navbar() {
   const navItems = [
     { title: "Beranda", href: "/" },
     {
+      title: "Layanan",
+      href: "/service",
+      subItems: [
+        { title: "Premium Home Care", href: "/service#home-care" },
+        { title: "Medical Check Up", href: "/service#mcu" },
+        { title: "Corporate Medical", href: "/service#corporate" },
+        { title: "Konsultasi Dokter", href: "/service#konsultasi" },
+        { title: "Fisioterapi", href: "/service#fisioterapi" },
+      ],
+    },
+    {
       title: "Artikel",
       href: "/article",
       subItems: articleCategories.slice(0, 4).map((cat) => ({
@@ -72,22 +83,77 @@ export default function Navbar() {
     <header
       ref={navbarRef}
       className={`fixed top-0 z-50 w-full bg-white transition-all duration-300 ${
-        isAtTop ? "" : "border-b border-gray-300"
+        isAtTop ? "" : "border-b border-gray-300 shadow-lg"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between p-4">
-        <div className="text-xl font-bold text-navy">Klinik Sehat</div>
+        <div className="text-xl font-bold text-primary">Klinik Sehat</div>
 
         <NavigationMenu className="hidden md:flex">
-          <NavigationMenuList>
+          <NavigationMenuList className="flex items-center">
             <NavigationMenuItem>
-              <NavigationMenuLink href={`/`} className="px-4 py-2">
+              <NavigationMenuLink href={`/`} className="px-4 py-2 text-primary hover:text-primary/80">
                 Beranda
               </NavigationMenuLink>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Artikel</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="px-4 py-2 text-primary hover:text-primary/80">Layanan</NavigationMenuTrigger>
+              <NavigationMenuContent className="min-w-[200px]">
+                <ul className="grid gap-2 p-4">
+                  <li>
+                    <NavigationMenuLink
+                      href="/service#home-care"
+                      className="block px-2 py-1 hover:underline"
+                    >
+                      Premium Home Care
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink
+                      href="/service#mcu"
+                      className="block px-2 py-1 hover:underline"
+                    >
+                      Medical Check Up
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink
+                      href="/service#corporate"
+                      className="block px-2 py-1 hover:underline"
+                    >
+                      Corporate Medical
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink
+                      href="/service#konsultasi"
+                      className="block px-2 py-1 hover:underline"
+                    >
+                      Konsultasi Dokter
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink
+                      href="/service#fisioterapi"
+                      className="block px-2 py-1 hover:underline"
+                    >
+                      Fisioterapi
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <Link href="/service">
+                      <Button variant="outline" className="w-full mt-2 text-sm">
+                        Lihat Semua Layanan
+                      </Button>
+                    </Link>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="px-4 py-2 text-primary hover:text-primary/80">Artikel</NavigationMenuTrigger>
               <NavigationMenuContent className="min-w-[200px]">
                 <ul className="grid gap-2 p-4">
                   {articleCategories.slice(0, 4).map((cat) => (
@@ -112,7 +178,7 @@ export default function Navbar() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Galeri</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="px-4 py-2 text-primary hover:text-primary/80">Galeri</NavigationMenuTrigger>
               <NavigationMenuContent className="min-w-[300px]">
                 <div className="grid grid-cols-2 gap-2 p-4">
                   {galleryItems.map((src, i) => (
@@ -139,7 +205,7 @@ export default function Navbar() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuLink href="/about-us" className="px-4 py-2">
+              <NavigationMenuLink href="/about-us" className="px-4 py-2 text-primary hover:text-primary/80">
                 Tentang Kami
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -148,9 +214,9 @@ export default function Navbar() {
 
         <Button
           className="ml-4 hidden md:inline-block"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          asChild
         >
-          Kontak Kami
+          <Link href="/contact">Kontak Kami</Link>
         </Button>
 
         {/* Mobile menu button */}

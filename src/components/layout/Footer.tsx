@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-primary text-white py-10 px-4">
-        <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h4 className="text-lg font-semibold mb-4">Klinik Sehat</h4>
             <p className="text-sm text-white/80">
@@ -22,6 +22,9 @@ export default function Footer() {
                 <Link href="/">Beranda</Link>
               </li>
               <li>
+                <Link href="/service">Layanan</Link>
+              </li>
+              <li>
                 <Link href="/article">Artikel</Link>
               </li>
               <li>
@@ -32,6 +35,27 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/contact">Kontak</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Layanan Kami</h4>
+            <ul className="space-y-2 text-sm text-white/80">
+              <li>
+                <Link href="/service#home-care">Premium Home Care</Link>
+              </li>
+              <li>
+                <Link href="/service#mcu">Medical Check Up</Link>
+              </li>
+              <li>
+                <Link href="/service#corporate">Corporate Medical</Link>
+              </li>
+              <li>
+                <Link href="/service#konsultasi">Konsultasi Dokter</Link>
+              </li>
+              <li>
+                <Link href="/service#fisioterapi">Fisioterapi</Link>
               </li>
             </ul>
           </div>
