@@ -119,7 +119,7 @@ export default function HeroSection() {
 
         <div ref={imageRef} className="flex-1 w-screen md:max-w-3xl hero-img relative">
           <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-2xl blur-xl"></div>
+            <div className="absolute -inset-4 rounded-2xl"></div>
             <Image
               src="/assets/placeholder.png"
               alt="Hero Ilustrasi Klinik"

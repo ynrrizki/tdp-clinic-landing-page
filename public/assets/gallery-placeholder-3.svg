@@ -1,0 +1,32 @@
+<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef7ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fae8ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="120" height="120" fill="url(#bgGrad3)"/>
+  
+  <!-- Hospital bed icon -->
+  <g transform="translate(60,60)" fill="#a855f7" opacity="0.6">
+    <!-- Bed frame -->
+    <rect x="-20" y="0" width="40" height="8" rx="2" fill="#a855f7"/>
+    
+    <!-- Bed legs -->
+    <rect x="-18" y="8" width="2" height="8" fill="#a855f7"/>
+    <rect x="16" y="8" width="2" height="8" fill="#a855f7"/>
+    
+    <!-- Pillow -->
+    <ellipse cx="-10" cy="-4" rx="8" ry="3" fill="#d8b4fe"/>
+    
+    <!-- Patient figure (simple) -->
+    <circle cx="5" cy="-8" r="3" fill="#a855f7" opacity="0.8"/>
+    <rect x="0" y="-5" width="10" height="5" rx="2" fill="#a855f7" opacity="0.8"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="60" y="95" font-family="Arial, sans-serif" font-size="10" font-weight="500" text-anchor="middle" fill="#7c3aed">Ruang Rawat</text>
+  <text x="60" y="107" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Klinik Sehat</text>
+</svg>

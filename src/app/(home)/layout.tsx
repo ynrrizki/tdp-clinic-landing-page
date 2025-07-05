@@ -2,6 +2,7 @@ import ScrollWrapper from "@/components/gsap/ScrollWrapper";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 import React from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -28,6 +29,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           label="Hubungi dr. Fera"
         />
       </div>
+      
+      {/* Scroll to Top Button */}
+      <ScrollToTopButton />
     </>
   );
 }

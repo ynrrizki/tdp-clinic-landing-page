@@ -79,25 +79,60 @@
 }
 
 :root {
-  --background: oklch(1 0 0); /* Putih */
-  --foreground: oklch(0.18 0 0); /* Hitam */
+  /* Base Colors - Improved contrast and readability */
+  --background: oklch(0.99 0 0); /* Soft white, easier on eyes */
+  --foreground: oklch(0.15 0 0); /* Deep charcoal for better readability */
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0 0);
+  /* Card Colors */
+  --card: oklch(1 0 0); /* Pure white for cards */
+  --card-foreground: oklch(0.15 0 0);
 
+  /* Popover Colors */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0 0);
+  --popover-foreground: oklch(0.15 0 0);
 
-  --primary: oklch(0.3 0.05 265); /* Navy Blue */
-  --primary-foreground: oklch(1 0 0); /* Putih */
+  /* Primary - Custom blue */
+  --primary: oklch(.3 .05 265);
+  --primary-foreground: oklch(0.985 0 0);
 
-  --secondary: oklch(0.9 0.18 95); /* Kuning Aksen */
-  --secondary-foreground: oklch(0.18 0 0); /* Hitam */
+  /* Secondary - Back to default */
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
 
-  --muted: oklch(0.95 0 0); /* Abu muda */
-  --muted-foreground: oklch(0.5 0 0); /* Abu gelap */
+  /* Muted - Back to default */
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
 
-  --accent: oklch(0.92 0.16 85);
+  /* Accent - Back to default */
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+
+  /* Destructive - Improved red for medical context */
+  --destructive: oklch(0.55 0.22 20); /* Medical red - clear but not aggressive */
+  --destructive-foreground: oklch(1 0 0);
+
+  /* Border & Input - Subtle and accessible */
+  --border: oklch(0.92 0.01 260); /* Very subtle blue-tinted border */
+  --input: oklch(0.94 0.01 260); /* Input background with subtle tint */
+  --ring: oklch(0.45 0.15 220); /* Focus ring matches primary */
+
+  /* Chart Colors - Medical & Health themed palette */
+  --chart-1: oklch(0.5 0.18 220); /* Medical blue */
+  --chart-2: oklch(0.6 0.15 160); /* Healing green */
+  --chart-3: oklch(0.65 0.18 60); /* Energy yellow */
+  --chart-4: oklch(0.55 0.16 300); /* Calm purple */
+  --chart-5: oklch(0.6 0.14 20); /* Warm red */
+
+  /* Success & Warning colors */
+  --success: oklch(0.6 0.15 150); /* Clear success green */
+  --success-foreground: oklch(1 0 0);
+  
+  --warning: oklch(0.7 0.18 70); /* Attention-grabbing orange */
+  --warning-foreground: oklch(0.15 0 0);
+
+  /* Info color */
+  --info: oklch(0.55 0.16 240); /* Clear info blue */
+  --info-foreground: oklch(1 0 0);
 }
 
 /* .dark {
@@ -222,4 +257,123 @@
 
 .whatsapp-button:hover .whatsapp-ring {
   animation-duration: 1s;
+}
+
+/* Line clamp utilities for text truncation */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Custom Color Utilities for Medical Theme */
+.text-success {
+  color: oklch(var(--success));
+}
+
+.bg-success {
+  background-color: oklch(var(--success));
+}
+
+.text-success-foreground {
+  color: oklch(var(--success-foreground));
+}
+
+.text-warning {
+  color: oklch(var(--warning));
+}
+
+.bg-warning {
+  background-color: oklch(var(--warning));
+}
+
+.text-warning-foreground {
+  color: oklch(var(--warning-foreground));
+}
+
+.text-info {
+  color: oklch(var(--info));
+}
+
+.bg-info {
+  background-color: oklch(var(--info));
+}
+
+.text-info-foreground {
+  color: oklch(var(--info-foreground));
+}
+
+/* Enhanced Primary Variations */
+.bg-primary-soft {
+  background-color: oklch(0.95 0.05 220);
+}
+
+.bg-primary-muted {
+  background-color: oklch(0.9 0.08 220);
+}
+
+.border-primary-soft {
+  border-color: oklch(0.8 0.1 220);
+}
+
+/* Enhanced Secondary Variations */
+.bg-secondary-soft {
+  background-color: oklch(0.95 0.06 160);
+}
+
+.text-secondary-dark {
+  color: oklch(0.4 0.15 160);
+}
+
+/* Medical-specific accent colors */
+.bg-medical-blue {
+  background-color: oklch(0.5 0.18 220);
+}
+
+.bg-healing-green {
+  background-color: oklch(0.6 0.15 160);
+}
+
+.bg-energy-yellow {
+  background-color: oklch(0.65 0.18 60);
+}
+
+.bg-calm-purple {
+  background-color: oklch(0.55 0.16 300);
+}
+
+.bg-warm-red {
+  background-color: oklch(0.6 0.14 20);
+}
+
+/* Hover state utilities */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -8px oklch(var(--primary) / 0.3);
 }

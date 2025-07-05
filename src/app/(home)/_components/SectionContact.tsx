@@ -3,11 +3,25 @@
 import { Mail, MapPin, Phone, Clock4, Instagram, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Configuration untuk lokasi klinik - mudah diubah
+const clinicLocation = {
+  name: "Klinik Sehat",
+  address: "Jl. Kesehatan No. 10, Jakarta Selatan", 
+  // Koordinat untuk area Kemang, Jakarta Selatan (contoh lokasi strategis)
+  latitude: -6.2654,
+  longitude: 106.8100,
+  // Google Maps embed URL - bisa diganti sesuai lokasi sebenarnya
+  embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5234567890!2d106.8100!3d-6.2654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1c8b2a3d4e5%3A0x1a2b3c4d5e6f7890!2sKemang%20Raya%2C%20Jakarta%20Selatan!5e0!3m2!1sid!2sid!4v1640995200000!5m2!1sid!2sid",
+  // Links untuk navigasi
+  googleMapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Jl. Kesehatan No. 10, Jakarta Selatan")}`,
+  wazeUrl: `https://waze.com/ul?q=${encodeURIComponent("Jl. Kesehatan No. 10, Jakarta Selatan")}`,
+};
+
 const contactItems = [
   {
     icon: MapPin,
     label: "Alamat Klinik",
-    value: "Jl. Kesehatan No. 10, Jakarta Selatan",
+    value: clinicLocation.address,
   },
   {
     icon: Mail,
@@ -84,22 +98,53 @@ export default function SectionContact() {
 
           {/* Map & Facilities */}
           <div className="space-y-6">
-            {/* Interactive Map Placeholder */}
+            {/* Google Maps Embed */}
             <div className="bg-white rounded-lg p-6 shadow-sm border">
               <h3 className="text-xl font-semibold text-primary mb-4 flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
                 Lokasi Klinik
               </h3>
-              <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center mb-4">
-                <div className="text-center text-gray-500">
-                  <MapPin className="w-12 h-12 mx-auto mb-2" />
-                  <p>Peta Interaktif</p>
-                  <p className="text-sm">Jl. Kesehatan No. 10, Jakarta Selatan</p>
-                </div>
+              <div className="rounded-lg overflow-hidden mb-4">
+                <iframe
+                  src={clinicLocation.embedUrl}
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg"
+                  title={`Peta lokasi ${clinicLocation.name}`}
+                ></iframe>
               </div>
-              <Button className="w-full" variant="outline">
-                Buka di Google Maps
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button 
+                  className="flex-1" 
+                  variant="outline"
+                  asChild
+                >
+                  <a 
+                    href={clinicLocation.googleMapsUrl}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Buka di Google Maps
+                  </a>
+                </Button>
+                <Button 
+                  className="flex-1" 
+                  variant="outline"
+                  asChild
+                >
+                  <a 
+                    href={clinicLocation.wazeUrl}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Buka di Waze
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* Facilities */}

@@ -1,0 +1,32 @@
+<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#eff6ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dbeafe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="120" height="120" fill="url(#bgGrad1)"/>
+  
+  <!-- Medical stethoscope icon -->
+  <g transform="translate(60,60)" fill="#3b82f6" opacity="0.6">
+    <!-- Stethoscope head -->
+    <circle cx="0" cy="-15" r="8" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="0" cy="-15" r="4" fill="#3b82f6"/>
+    
+    <!-- Stethoscope tube -->
+    <path d="M 0 -7 Q -10 5 -15 15 Q -15 25 -5 25 Q 5 25 5 15 Q 5 5 0 -7" 
+          fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <path d="M 0 -7 Q 10 5 15 15 Q 15 25 5 25" 
+          fill="none" stroke="#3b82f6" stroke-width="2"/>
+    
+    <!-- Earpieces -->
+    <circle cx="-15" cy="10" r="3" fill="#3b82f6"/>
+    <circle cx="15" cy="10" r="3" fill="#3b82f6"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="60" y="95" font-family="Arial, sans-serif" font-size="10" font-weight="500" text-anchor="middle" fill="#1e40af">Ruang Konsultasi</text>
+  <text x="60" y="107" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#64748b">Klinik Sehat</text>
+</svg>
